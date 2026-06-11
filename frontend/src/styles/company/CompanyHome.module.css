@@ -1,0 +1,481 @@
+/* ==================== GLOBAL ==================== */
+.container {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* ==================== HERO SLIDER ==================== */
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  /* background: rgba(0, 0, 0, 0.15);   Sangat ringan */
+  z-index: 1;
+}
+
+.heroContent {
+  position: absolute;
+  left: 15%;
+  bottom: 18%;        
+  z-index: 2;
+  color: var(--white-color);
+  max-width: 620px;
+}
+
+.heroTitle {
+  font-size: 5.8rem;
+  line-height: 1.05;
+  font-weight: 900;
+  margin-bottom: 1.2rem;
+}
+
+.highlight {
+  color: var(--red-color);
+}
+
+.heroSubtitle {
+  font-size: 1.35rem;
+  margin-bottom: 2.8rem;
+  opacity: 0.95;
+}
+
+.heroButtons {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.btnOutline {
+  background: transparent;
+  color: var(--white-color);
+  border: 2px solid var(--white-color);
+  padding: 5px 15px;
+  border-radius: 45px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btnOutline:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.btnRed {
+  background: var(--red-color);
+  color: var(--white-color);
+  border: none;
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ==================== NAVIGATION BUTTONS ==================== */
+.prevBtn, .nextBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.2);
+  color: var(--white-color);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  font-weight: 300;
+  z-index: 10;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.prevBtn:hover, .nextBtn:hover {
+  background: rgba(255, 255, 255, 0.35);
+  border-color: var(--white-color);
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+.prevBtn { 
+  left: 5%; 
+}
+
+.nextBtn { 
+  right: 5%; 
+}
+
+.prevBtn::before {
+  content: '‹';
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;     
+}
+
+.nextBtn::before {
+  content: '›';
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.dots {
+  position: absolute;
+  bottom: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  z-index: 10;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.6);
+  border: none;
+  cursor: pointer;
+}
+
+.dot.activeDot {
+  background: var(--red-color);
+  transform: scale(1.8);
+}
+
+/* ==================== QUOTE SECTION ==================== */
+.quoteSection {
+  padding: 120px 5rem;
+  background: var(--white-color);
+}
+
+.quoteContainer {
+  max-width: 1400px;
+  margin: 0 auto;              
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;                   
+  align-items: center;
+}
+
+.quoteImage {
+  display: flex;
+  justify-content: center;    
+}
+
+.quoteImage img {
+  width: 65%;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.quoteTextContent {
+  padding-right: 0; 
+}
+
+.quoteText {
+  color: var(--text-color);
+  font-size: 2.3rem;
+  line-height: 1.3;
+  font-weight: 700;
+  margin-bottom: 1.8rem;
+}
+
+.quoteDesc {
+  font-size: 1.18rem;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 2.2rem;
+}
+
+.discoverLink {
+  color: var(--red-color);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* ==================== WHY ASTERISM ==================== */
+.whySection {
+  padding: 100px 5rem;
+  background: var(--white-color);
+  text-align: center;
+}
+
+.sectionTitle {
+  color: var(--text-color);
+  font-size: 2.8rem;
+  margin-bottom: 4rem;
+  font-weight: 700;
+}
+
+.whyGrid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.whyCard {
+  color: var(--text-color);
+  background: var(--white-color);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+  align-items: center;
+}
+
+.whyCard img {
+  width: 90%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 1px;
+  margin: 0 auto 1.5rem auto;   /* INI yg bikin center */
+  display: block;
+}
+
+/* ==================== FROM THE ARCHIVE ==================== */
+.archiveSection {
+  padding: 100px 5rem;
+  background: var(--white-color);
+}
+
+.archiveGrid {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.archiveCard {
+  color: var(--text-color);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.archiveCard img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+}
+
+.archiveCard h3 {
+  padding: 1.5rem 1.5rem 0.5rem;
+  font-size: 1.4rem;
+}
+
+.archiveCard p {
+  padding: 0 1.5rem 1.5rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* ==================== FAQ ACCORDION ==================== */
+.faqSection {
+  padding: 100px 5rem;
+  background: #111;
+  color: var(--white-color);
+}
+
+.faqHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.faqHeader h2 {
+  font-size: 2.6rem;
+  margin-bottom: 1rem;
+}
+
+.faqGrid {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+
+.faqItem {
+  background: #1f1f1f;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.faqItem:hover {
+  background: #2a2a2a;
+  transform: translateY(-3px);
+}
+
+.faqQuestion {
+  padding: 1.4rem 1.8rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faqIcon {
+  font-size: 1.5rem;
+  font-weight: 300;
+  transition: transform 0.3s ease;
+}
+
+.faqItem.active .faqIcon {
+  transform: rotate(180deg);
+}
+
+.faqAnswer {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 1.8rem;
+  background: #181818;
+  transition: all 0.4s ease;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #ddd;
+}
+
+.faqItem.active .faqAnswer {
+  max-height: 200px;
+  padding: 1.4rem 1.8rem 1.8rem;
+}
+/* ==================== CHAT CTA ==================== */
+.chatSection {
+  padding: 100px 5rem;
+  background: #1a1a1a;
+  color: var(--white-color);
+  text-align: center;
+}
+
+.chatButton {
+  background: #c8102e;
+  color: var(--white-color);
+  padding: 16px 40px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-top: 2rem;
+}
+
+/* ==================== FOOTER ==================== */
+.footer {
+  background: #0a0a0a;
+  color: #aaa;
+  padding: 4rem 5rem 2rem;
+  text-align: center;
+}
+
+/* ==================== SCROLL REVEAL ANIMATION ==================== */
+.reveal {
+  opacity: 0;
+  transform: translateY(80px) scale(0.95);
+  transition: all 0.9s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Stagger effect untuk children */
+.whyGrid .whyCard,
+.archiveGrid .archiveCard,
+.faqGrid .faqItem {
+  transition: all 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+
+.whyCard img {
+  transition: transform 0.5s ease;
+}
+
+.whyCard:hover img {
+  transform: scale(1.08);
+}
+
+.archiveCard {
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+
+.whyCard:hover, .archiveCard:hover {
+  transform: translateY(-15px) scale(1.03);
+}
+
+
+/* Back to Top */
+.backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: var(--red-color);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.6rem;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(200, 16, 46, 0.3);
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.backToTop:hover {
+  transform: scale(1.1);
+  background: #a00;
+}
+
+@keyframes revealAnimation {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal {
+  animation: revealAnimation 0.9s forwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;   /* mulai animasi saat muncul */
+}
+
+/* Optional: stagger antar section */
+.quoteSection.reveal { animation-delay: 0.1s; }
+.whySection.reveal { animation-delay: 0.2s; }
+.archiveSection.reveal { animation-delay: 0.3s; }
+.faqSection.reveal { animation-delay: 0.4s; }
+.chatSection.reveal { animation-delay: 0.5s; }

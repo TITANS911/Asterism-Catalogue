@@ -1,0 +1,108 @@
+.productCard {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+
+.productCard:hover {
+    transform: translateY(-4px); 
+}
+
+.imageWrapper {
+    width: 100%;
+    background-color: #f5f5f5;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.imageWrapper img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+}
+
+.productInfo {
+    padding: 15px 0 5px 0;
+}
+
+.productName {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #111;
+    margin: 0 0 5px 0;
+}
+
+.description {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0 0 10px 0;
+    line-height: 1.4;
+}
+
+.priceRow {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.price {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #111;
+    margin: 0;
+}
+
+.originalPrice {
+    font-size: 0.95rem;
+    color: #999;
+    text-decoration: line-through;
+    margin: 0;
+}
+
+.discountBadge {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #16a34a;
+    margin: 0;
+}
+
+.saleCard .productName {
+    margin: 0 0 2px 0;
+}
+
+.saleCard .description {
+    margin: 0 0 10px 0;
+}
+
+.saleCard .originalPrice {
+    font-size: 0.8rem;
+}
+
+.saleCard .discountBadge {
+    color: #111;
+}
+
+/* GAYA KARTU KECIL (SMALL SIZE CARD) */
+.smallCard .productName {
+    font-size: 0.9rem;
+}
+
+.smallCard .description {
+    font-size: 0.8rem;
+    margin-bottom: 6px;
+}
+
+.smallCard .price {
+    font-size: 0.95rem;
+}
+
+.smallCard .productInfo {
+    padding: 10px 0 5px 0;
+}

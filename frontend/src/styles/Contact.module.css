@@ -1,0 +1,203 @@
+.wrapper {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 132px 32px 96px;
+  background: #f3f3f3;
+}
+
+.cardContact {
+  text-align: center;
+  margin-bottom: 58px;
+}
+
+.cardTitle h1 {
+  margin: 0 0 12px;
+  font-size: clamp(2.25rem, 4vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1.05;
+  color: #111111;
+}
+
+.cardText p {
+  margin: 0 auto;
+  max-width: 680px;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #7b7b7b;
+}
+
+.cardContent {
+  display: grid;
+  grid-template-columns: minmax(320px, 1.08fr) minmax(320px, 0.92fr);
+  gap: 34px;
+  align-items: start;
+}
+
+.contactInfo {
+  min-height: 100%;
+  background: #050505;
+  color: #ffffff;
+  border-radius: 18px;
+  padding: 34px 34px 38px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.14);
+}
+
+.contactInfo h2 {
+  margin: 0 0 18px;
+  font-size: clamp(2rem, 3vw, 2.6rem);
+  line-height: 1.05;
+  font-weight: 800;
+}
+
+.infoDesc {
+  margin: 0 0 34px;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 540px;
+}
+
+.infoItem {
+  margin-bottom: 20px;
+}
+
+.infoItem:last-child {
+  margin-bottom: 0;
+}
+
+.infoHeader {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.infoHeader p {
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.infoIcon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.contactForm {
+  background: transparent;
+  padding-top: 4px;
+}
+
+.contactForm form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.formGroup label {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: #7a7a7a;
+}
+
+.formGroup input,
+.formGroup textarea {
+  width: 100%;
+  border: 1px solid #bfbfbf;
+  border-radius: 0;
+  background: #ffffff;
+  color: #111111;
+  padding: 12px 14px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  outline: none;
+}
+
+.formGroup input::placeholder,
+.formGroup textarea::placeholder {
+  color: #b5b5b5;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+  border-color: #111111;
+}
+
+.formGroup textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.contactForm button {
+  width: 100%;
+  margin-top: 4px;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 0;
+  background: #050505;
+  color: #ffffff;
+  font-size: 0.98rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+}
+
+.contactForm button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.contactForm button:hover:not(:disabled) {
+  background: #191919;
+}
+
+.statusMessage {
+  margin: 4px 0 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.statusSuccess {
+  color: #15803d;
+}
+
+.statusError {
+  color: #dc2626;
+}
+
+@media (max-width: 1024px) {
+  .wrapper {
+    padding: 116px 24px 80px;
+  }
+
+  .cardContent {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 104px 16px 64px;
+  }
+
+  .cardContact {
+    margin-bottom: 40px;
+  }
+
+  .cardText p {
+    font-size: 1rem;
+  }
+
+  .contactInfo {
+    padding: 26px 22px 28px;
+  }
+}

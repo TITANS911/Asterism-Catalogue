@@ -1,0 +1,462 @@
+/*BASE STYLES */
+.footer {
+  transition: all 0.3s ease;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.container {
+  max-width: 1600px;
+  margin: 0 1.7rem;
+  padding: 2rem 3rem;
+}
+
+/* BRAND SECTION  */
+.brand {
+  margin: 2rem 0 1.5rem 0;
+}
+
+.logo {
+  width: 220px;
+  object-fit: contain;
+}
+
+.tagline {
+  font-size: 1rem;
+  opacity: 0.7;
+  margin-top: 0.5rem;
+}
+
+/* NAVIGATION*/
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 4rem;
+
+  padding: 1.5rem 0;
+  margin-bottom: 20px;
+
+  border-top-width: 2px;
+  border-top-style: solid;
+
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+}
+
+.nav a {
+  text-decoration: none;
+  color: inherit;
+
+  font-size: 1.1rem;
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+/*CONTACT SECTION*/
+.contactSection {
+  margin-bottom: 40px;
+}
+
+.contactTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+
+  margin-bottom: 1.2rem;
+}
+
+/* CONTACT GRID */
+.contactGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 5rem;
+}
+
+/*CONTACT CARD */
+.contactCard {
+  display: flex;
+  flex-direction: column;
+}
+
+.iconBox {
+  width: 80px;
+  height: 80px;
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 1.5rem;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.cardTitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+
+  margin-bottom: 0.1rem;
+}
+
+.cardText {
+  font-size: 1rem;
+  line-height: 1.8;
+  opacity: 0.8;
+}
+
+/* Social Section */
+.socialSection {
+  border-top-width: 2px;
+  border-top-style: solid;
+
+  padding-top: 25px;
+}
+
+.socialTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.socialList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.socialItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.socialIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.socialItem p {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+
+.bottomFooter {
+  margin-top: 55px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.bottomFooter p {
+  font-size: 1rem;
+}
+
+.bottomLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+
+/* Theme */
+/* Company Theme */
+.themeCompany {
+  background-color: rgba(228, 224, 224, 0.5);
+  color: #111111;
+}
+
+.themeCompany .nav,
+.themeCompany .socialSection {
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+.themeCompany .iconBox {
+  border-color: rgba(0, 0, 0, 0.15);
+}
+
+.themeCompany .cardText,
+.themeCompany .tagline {
+  color: rgba(0, 0, 0, 0.65);
+}
+
+/* Ecommerce Theme */
+.themeEcommerce {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.themeEcommerce .nav,
+.themeEcommerce .socialSection {
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.themeEcommerce .iconBox {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.themeEcommerce .cardText,
+.themeEcommerce .tagline {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* For Hover*/
+.nav a:hover,
+.bottomLinks p:hover {
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+  cursor: pointer;
+}
+
+
+@media (max-width: 1024px) {
+
+  .container {
+    padding: 3rem 1.5rem;
+  }
+
+  .contactGrid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  .contactTitle,
+  .socialTitle {
+    font-size: 2.4rem;
+  }
+
+  .cardTitle {
+    font-size: 1.7rem;
+  }
+
+  .cardText,
+  .socialItem p {
+    font-size: 1.1rem;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .container {
+    padding: 2.5rem 1.25rem;
+  }
+
+  .logo {
+    width: 170px;
+  }
+
+  .nav {
+    gap: 1rem 1.5rem;
+  }
+
+  .nav a {
+    font-size: 0.95rem;
+  }
+
+  .contactTitle,
+  .socialTitle {
+    font-size: 2rem;
+  }
+
+  .iconBox {
+    width: 80px;
+    height: 80px;
+  }
+
+  .icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .cardTitle {
+    font-size: 1.4rem;
+  }
+
+  .cardText,
+  .socialItem p {
+    font-size: 1rem;
+  }
+
+  .bottomFooter {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .bottomLinks {
+    gap: 1rem;
+  }
+
+}
+
+
+/* Tbalet Mode*/
+@media (max-width: 1024px) {
+
+  .container {
+    padding: 3rem 1.5rem;
+  }
+
+  .contactGrid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .contactTitle,
+  .socialTitle {
+    font-size: 2.2rem;
+  }
+
+  .cardTitle {
+    font-size: 1.5rem;
+  }
+
+  .cardText,
+  .socialItem p {
+    font-size: 1rem;
+  }
+
+}
+
+/* Mobile Phone Mode */
+@media (max-width: 768px) {
+
+  .container {
+    padding: 2.5rem 1rem;
+  }
+
+  /* Brand */
+  .brand {
+    text-align: center;
+    /* justify-content: left; */
+  }
+
+  .logo {
+    width: 160px;
+    margin: auto;
+  }
+
+  .tagline {
+    font-size: 0.9rem;
+  }
+
+  /* Navigation */
+  .nav {
+    justify-content: center;
+    gap: 1rem;
+
+    padding: 1.5rem 0;
+    margin-bottom: 3rem;
+  }
+
+  .nav a {
+    font-size: 0.9rem;
+  }
+
+  /* Contact */
+  .contactSection {
+    margin-bottom: 4rem;
+  }
+
+  .contactTitle {
+    font-size: 1.8rem;
+    margin-bottom: 2.5rem;
+
+    text-align: center;
+  }
+
+  .contactGrid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .contactCard {
+    align-items: center;
+    text-align: center;
+  }
+
+  .iconBox {
+    width: 72px;
+    height: 72px;
+
+    border-radius: 18px;
+  }
+
+  .icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .cardTitle {
+    font-size: 1.2rem;
+  }
+
+  .cardText {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .cardInfo {
+    text-align: left;
+  }
+
+  /* Social */
+  .socialSection {
+    padding-top: 3rem;
+  }
+
+  .socialTitle {
+    font-size: 1.8rem;
+    text-align: center;
+
+    margin-bottom: 2rem;
+  }
+
+  .socialList {
+    gap: 1rem;
+  }
+
+  .socialItem {
+    justify-content: center;
+  }
+
+  .socialIcon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .socialItem p {
+    font-size: 0.95rem;
+  }
+
+  /* Bottom */
+  .bottomFooter {
+    margin-top: 4rem;
+
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    gap: 1.5rem;
+  }
+
+  .bottomFooter p {
+    font-size: 0.85rem;
+  }
+
+  .bottomLinks {
+    justify-content: center;
+    gap: 1rem;
+  }
+
+}

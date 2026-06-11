@@ -1,0 +1,69 @@
+# =====================
+# LOGS
+# =====================
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# =====================
+# DEPENDENCIES
+# =====================
+node_modules/
+
+# =====================
+# BUILD OUTPUT
+# =====================
+dist/
+dist-ssr/
+build/
+
+# =====================
+# ENV FILES
+# =====================
+.env
+.env.local
+.env.development
+.env.production
+
+# =====================
+# CACHE
+# =====================
+.cache/
+.parcel-cache/
+
+# =====================
+# TEST COVERAGE
+# =====================
+coverage/
+
+# =====================
+# EDITOR / IDE
+# =====================
+.vscode/
+!.vscode/extensions.json
+.idea/
+
+# =====================
+# OS FILES
+# =====================
+.DS_Store
+Thumbs.db
+
+# =====================
+# PROJECT LOCAL FILES
+# =====================
+*.local
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+.env
+.env.local
+.env.development
+.env.production

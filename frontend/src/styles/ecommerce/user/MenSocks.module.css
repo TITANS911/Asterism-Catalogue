@@ -1,0 +1,226 @@
+.wrapper {
+    min-height: 100vh;
+    background-color: #fff;
+}
+
+.blackHeaderSpacer {
+    height: 60px; /* Sesuaikan dengan tinggi header utama Anda */
+    background-color: #000;
+}
+
+/* ================== CATEGORY BAR ================== */
+.categoryBar {
+    width: 100%;
+    background-color: var(--red-color);
+    padding: 14px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.categoryList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 35px;
+    margin: 0;
+    padding: 0 24px;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+}
+
+.categoryList::-webkit-scrollbar {
+    display: none;
+}
+
+.categoryLink {
+    color: var(--white-color);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    position: relative;
+    padding: 4px 0;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.categoryLink:hover,
+.activeCategory {
+    opacity: 1;
+}
+
+.categoryLink::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--white-color);
+    transition: width 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+                left 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.categoryLink:hover::after,
+.activeCategory::after {
+    width: 100%;
+    left: 0;
+}
+
+/* ================== MAIN CONTAINER ================== */
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 20px 24px;
+}
+
+/* PRODUCTS HEADER */
+.productsHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.productsHeader h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.count {
+    color: #666;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+/* SORT */
+.sortByContainer {
+    position: relative;
+}
+
+.sortBtn {
+    padding: 10px 16px;
+    border: 1px solid #ddd;
+    background: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.sortDropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    z-index: 200;
+    min-width: 180px;
+    margin-top: 5px;
+}
+
+.sortOption {
+    width: 100%;
+    padding: 10px 16px;
+    text-align: left;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.sortOption:hover,
+.sortOptionActive {
+    background-color: #f5f5f5;
+}
+
+/* PRODUCT GRID */
+.productsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.productCard {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.productCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.imageWrapper {
+    height: 280px;
+    background: #f9f9f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+.imageWrapper img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.productInfo {
+    padding: 16px;
+}
+
+.productInfo h2 {
+    font-size: 1.1rem;
+    margin: 0 0 8px 0;
+    line-height: 1.3;
+}
+
+.description {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.price {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #000;
+    margin: 0;
+}
+
+/* Divider */
+.divider {
+    margin: 50px 0;
+    border: none;
+    border-top: 1px solid #eee;
+}
+
+/* Loading */
+.loading {
+    text-align: center;
+    padding: 3rem;
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .productsHeader {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .productsGrid {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    }
+}
